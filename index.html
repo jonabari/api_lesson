@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="test"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var key = "1ae2d602-e0b0-4458-a2e7-86954a872f0e";
+        var query = "dog";
+        var queryURL = "http://version1.api.memegenerator.net//Generators_Search?q=" + query + "&pageIndex=0&pageSize=20&apiKey=" + key;
+        $ .ajax ( {
+            url: queryURL ,
+            method: "GET"
+        } ) .then ( function ( response ) {
+            console.log(response);
+            for (let i=0;i<response.result.length;i++) {
+                let meme = $("<img>").attr("src", response.result[i].imageUrl)
+                $("#test").append(meme);
+            }
+        });
+    </script>
+    
+</body>
+</html>
