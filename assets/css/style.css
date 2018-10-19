@@ -1,0 +1,33 @@
+body {
+    height:100%;
+}
+
+input {
+    text-align: center;
+}
+
+.card-body {
+    overflow: auto;
+    max-height: 600px;
+}
+
+.jumbotron {
+    background-color: midnightblue;
+    color: whitesmoke;
+}
+
+.meme-img {
+    max-width: 400px;
+    margin: 5px;
+}
+
+#meme-final {
+    max-height: 450px;
+}
+
+
+
+
+
+
+
